@@ -261,10 +261,10 @@
 			    regexp. -->
 		<SEQ_REGEXP HASH_CHAR="/" TYPE="OPERATOR">/=?($|\s)</SEQ_REGEXP>
 		<!-- AT_WORD_START is TRUE not to handle "a/b/c". -->
-		<SPAN AT_WORD_START="TRUE" TYPE="LITERAL3" DELEGATE="RegexpLiteral">
+		<!--<SPAN AT_WORD_START="TRUE" TYPE="LITERAL3" DELEGATE="RegexpLiteral">
 			<BEGIN>/</BEGIN>
 			<END>/</END>
-		</SPAN>
+		</SPAN>!-->
 
 		<!-- %r(regexp?) -->
 		<SPAN TYPE="LITERAL3" DELEGATE="RegexpLiteral">
