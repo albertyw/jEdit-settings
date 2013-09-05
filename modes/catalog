@@ -6,10 +6,11 @@
 <!-- Add lines like the following, one for each edit mode you add: -->
 <!-- <MODE NAME="foo" FILE="foo.xml" FILE_NAME_GLOB="*.foo" /> -->
 
-<MODE NAME="rakefile" FILE="ruby.xml" FILE_NAME_GLOB="*Rakefile" />
-<MODE NAME="ruby" FILE="ruby.xml" FILE_NAME_GLOB="*.{rb,rbw}" FIRST_LINE_GLOB="#!*/*ruby*" />
+<MODE NAME="django" FILE="django.xml" FILE_NAME_GLOB="*.dj" />
 <MODE NAME="haml" FILE="haml.xml" FILE_NAME_GLOB="*.haml" />
 <MODE NAME="markdown" FILE="markdown.xml" FILE_NAME_GLOB="*.md" />
-<MODE NAME="django" FILE="django.xml" FILE_NAME_GLOB="*.dj" />
+<MODE NAME="rakefile" FILE="ruby.xml" FILE_NAME_GLOB="*Rakefile" />
+<MODE NAME="ruby" FILE="ruby.xml" FILE_NAME_GLOB="*.{rb,rbw}" FIRST_LINE_GLOB="#!*/*ruby*" />
+<MODE NAME="sass" FILE="sass.xml" FILE_NAME_GLOB="*.{sass,scss}" />
 
 </MODES>
