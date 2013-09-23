@@ -231,7 +231,7 @@
 		<!-- "Override" comments to avoid consuming the </SCRIPT> tag. -->
 		<SPAN_REGEXP TYPE="COMMENT1" HASH_CHAR="/*">
 			<BEGIN>/\*</BEGIN>
-			<END REGEXP="TRUE">(?i)(?=&lt;/SCRIPT\b)</END>
+			<END REGEXP="TRUE">\*\/|(?i)(?=&lt;/SCRIPT\b)</END>
 		</SPAN_REGEXP>
 		<SEQ_REGEXP TYPE="COMMENT2" HASH_CHAR="//">(?i)//.*(?=&lt;/SCRIPT\b)</SEQ_REGEXP>
 		<!-- If closing </SCRIPT> tag is found, switch to ENDTAG ruleset. -->
