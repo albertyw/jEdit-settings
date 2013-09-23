@@ -8,6 +8,7 @@
 
 <MODE NAME="django" FILE="django.xml" FILE_NAME_GLOB="*.dj" />
 <MODE NAME="haml" FILE="haml.xml" FILE_NAME_GLOB="*.haml" />
+<MODE NAME="html" FILE="html.xml" FILE_NAME_GLOB="*.{html,htm,hta}" />
 <MODE NAME="markdown" FILE="markdown.xml" FILE_NAME_GLOB="*.md" />
 <MODE NAME="rakefile" FILE="ruby.xml" FILE_NAME_GLOB="*Rakefile" />
 <MODE NAME="ruby" FILE="ruby.xml" FILE_NAME_GLOB="*.{rb,rbw}" FIRST_LINE_GLOB="#!*/*ruby*" />
