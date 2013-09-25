@@ -1,6 +1,7 @@
 activity.log
 jars-cache
 history
+killring.xml
 perspective.xml
 pluginMgr-Cached.xml.gz
 plugins/projectviewer.ProjectPlugin/
