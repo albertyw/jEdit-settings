@@ -186,32 +186,6 @@
 			<END>$1</END>
 		</SPAN_REGEXP>
 
-		<!-- Here documents <<"FOO" <<-"FOO" -->
-		<!-- Unfortunately, in a SPAN_REGEXP element only the <BEGIN> tag takes
-			 a regex, not the <END> tag. So an instance of FOO anywhere in the here
-			 document will terminate highlighting; I couldn't make it smarter. -->
-		<SPAN_REGEXP HASH_CHAR="&lt;&lt;" TYPE="LITERAL1" DELEGATE="doubleQuoteLiteral">
-			<BEGIN>&lt;&lt;-?"([\p{Graph}]+)"</BEGIN>
-			<END REGEXP="TRUE">^\S*$1$</END>
-		</SPAN_REGEXP>
-
-		<!-- Here documents <<'FOO' <<-'FOO' -->
-		<!-- Unfortunately, in a SPAN_REGEXP element only the <BEGIN> tag takes
-			 a regex, not the <END> tag. So an instance of FOO anywhere in the here
-			 document will terminate highlighting; I couldn't make it smarter. -->
-		<SPAN_REGEXP HASH_CHAR="&lt;&lt;" TYPE="LITERAL1">
-			<BEGIN>&lt;&lt;-?'([\p{Graph}]+)'</BEGIN>
-			<END REGEXP="TRUE">^\S*$1$</END>
-		</SPAN_REGEXP>
-
-		<!-- Here documents <<FOO <<-FOO -->
-		<!-- Unfortunately, in a SPAN_REGEXP element only the <BEGIN> tag takes
-			 a regex, not the <END> tag. So an instance of FOO anywhere in the here
-			 document will terminate highlighting; I couldn't make it smarter. -->
-		<SPAN_REGEXP HASH_CHAR="&lt;&lt;" TYPE="LITERAL1" DELEGATE="doubleQuoteLiteral">
-			<BEGIN>&lt;&lt;-?([A-Za-z_]+)</BEGIN>
-			<END REGEXP="TRUE">^\S*$1$</END>
-		</SPAN_REGEXP>
 
 		<!-- Shell command strings -->
 
