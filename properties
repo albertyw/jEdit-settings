@@ -1,5 +1,5 @@
 #jEdit properties
-#Wed Jan 22 22:17:40 PST 2014
+#Wed Jan 22 22:20:04 PST 2014
 mode.haml.customSettings=false
 buffer.encoding=UTF-8
 search.wrap.toggle=false
@@ -76,7 +76,7 @@ highlighter-panel.dock-position=floating
 view.y=-8
 view.x=-103
 mode.html.tabSize=4
-options.width=591
+options.width=755
 firewall.socks.host=
 vfs.browser.y=50
 vfs.browser.x=50
@@ -200,8 +200,8 @@ gatchan.highlight.square.color=\#ff0000
 search.regexp.toggle=false
 mode.django.collapseFolds=0
 options.toolbar.selectedActionSet=Built-in Commands
-vfs.browser.dialog.y=116
-vfs.browser.dialog.x=-866
+vfs.browser.dialog.y=152
+vfs.browser.dialog.x=487
 mode.ruby.firstlineGlob=\#\!*/*ruby*
 mode.d.customSettings=false
 fastopen.search.delay=2.0
@@ -317,7 +317,7 @@ mode.coffeescript.maxLineLen=80
 sessions.switcher.showInsideBufferList=false
 view.font=Inconsolata
 plugin-options.last=buffertabs
-options.height=412
+options.height=568
 gatchan.highlight.defaultColor=\#66ffff
 buffer.tabSize=4
 plugin.Highlight.enabled=true
@@ -327,4 +327,4 @@ plugin-blacklist.XSearch.jar=true
 mode.html.noWordSep=_
 projectviewer.tmp_menu=
 fastopen.patternFromSelectedText=false
-options.last=plugin-manager
+options.last=textarea
