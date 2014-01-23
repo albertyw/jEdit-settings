@@ -1,5 +1,5 @@
 #jEdit's keymap imported
-#Tue Jul 23 13:24:32 EDT 2013
+#Wed Jan 22 22:16:40 PST 2014
 select-end.shortcut2=AS+x
 select-line-range.shortcut=C+e C+l
 close-docking-area.shortcut=C+e C+BACK_QUOTE
@@ -52,7 +52,6 @@ select-marker.shortcut=C+u
 regexp.shortcut=C+e C+x
 next-fold.shortcut=A+DOWN
 select-next-word.shortcut=CS+RIGHT
-quick-search-word.shortcut=A+COMMA
 vfs.browser.rename.shortcut=F2
 select-next-line.shortcut2=AS+k
 delete-start-line.shortcut=CS+BACK_SPACE
@@ -63,7 +62,7 @@ next-paragraph.shortcut=C+DOWN
 document-home.shortcut=C+HOME
 cut-append-string-register.shortcut=C+r C+u
 cut.shortcut2=S+DELETE
-next-textarea.shortcut=A+PAGE_DOWN
+next-textarea.shortcut=C+PAGE_DOWN
 new-file-in-mode.shortcut=CS+n
 shift-right.shortcut=A+RIGHT
 replace-in-selection.shortcut=C+e C+r
@@ -81,7 +80,7 @@ goto-line.shortcut=C+g
 select-prev-line.shortcut2=AS+i
 resplit.shortcut=C+4
 backspace-word.shortcut=C+BACK_SPACE
-prev-textarea.shortcut=A+PAGE_UP
+prev-textarea.shortcut=C+PAGE_UP
 combined-options.shortcut=C+F12
 copy-append-string-register.shortcut=C+r C+a
 expand-abbrev.shortcut=C+SEMICOLON
@@ -146,7 +145,6 @@ run-temp-macro.shortcut=C+m C+p
 select-next-page.shortcut2=AS+a
 find-next.shortcut=F3
 shift-left.shortcut2=S+TAB
-hypersearch-word.shortcut=A+PERIOD
 select-none.shortcut=ESCAPE
 select-line.shortcut=C+e l
 prev-buffer.shortcut=CS+TAB
