@@ -1,7 +1,6 @@
 #jEdit's keymap imported
-#Thu Jan 09 18:03:51 PST 2014
+#Wed Jan 22 22:16:40 PST 2014
 end.shortcut2=A+e
-select-end.shortcut2=AS+x
 select-line-range.shortcut=C+e C+l
 close-docking-area.shortcut=C+e C+BACK_QUOTE
 delete-paragraph.shortcut=C+e d
@@ -64,7 +63,7 @@ next-paragraph.shortcut=C+DOWN
 document-home.shortcut=C+HOME
 cut-append-string-register.shortcut=C+r C+u
 cut.shortcut2=S+DELETE
-next-textarea.shortcut=A+PAGE_DOWN
+next-textarea.shortcut=C+PAGE_DOWN
 new-file-in-mode.shortcut=CS+n
 shift-right.shortcut=A+RIGHT
 next-buffer.shortcut2=A+TAB A+i
@@ -83,7 +82,7 @@ goto-line.shortcut=C+g
 select-prev-line.shortcut2=AS+i
 resplit.shortcut=C+4
 backspace-word.shortcut=C+BACK_SPACE
-prev-textarea.shortcut=A+PAGE_UP
+prev-textarea.shortcut=C+PAGE_UP
 combined-options.shortcut=C+F12
 copy-append-string-register.shortcut=C+r C+a
 expand-abbrev.shortcut=C+SEMICOLON
@@ -91,7 +90,6 @@ prev-fold.shortcut=A+UP
 select-prev-word.shortcut=CS+LEFT
 toggle-full-screen.shortcut=F11
 next-page.shortcut=PAGE_DOWN
-hypersearch.shortcut=C+PERIOD
 vfs.browser.synchronize.shortcut=-
 next-buffer.shortcut=C+TAB
 range-comment.shortcut=C+e C+c
@@ -149,7 +147,6 @@ find.shortcut=C+f
 run-temp-macro.shortcut=C+m C+p
 select-next-page.shortcut2=AS+a
 find-next.shortcut=F3
-hypersearch-word.shortcut=A+PERIOD
 shift-left.shortcut2=S+TAB
 select-none.shortcut=ESCAPE
 prev-buffer.shortcut=CS+TAB
