@@ -1,77 +1,77 @@
 <?xml version="1.1" encoding="UTF-8" ?>
 <!DOCTYPE KILLRING SYSTEM "killring.dtd">
 <KILLRING>
-<ENTRY>Openbiome.com'</ENTRY>
-<ENTRY>:</ENTRY>
+<ENTRY>show data</ENTRY>
+<ENTRY>show </ENTRY>
+<ENTRY>, c</ENTRY>
+<ENTRY>he</ENTRY>
+<ENTRY>r</ENTRY>
+<ENTRY>a</ENTRY>
+<ENTRY>tree_file = args.tree_file</ENTRY>
+<ENTRY>tree_</ENTRY>
 <ENTRY>
-        try:
-          verified_from_address = from_address.verify()
-        except easypost.Error as e:
-          raise e
-        if hasattr(verified_from_address, 'message'):
-          # the from address is not invalid, but it has an issue
-          pass</ENTRY>
-<ENTRY>verified_address</ENTRY>
-<ENTRY>try:
-  verified_from_address = from_address.verify()</ENTRY>
-<ENTRY>raise e</ENTRY>
-<ENTRY>verified_from_address</ENTRY>
-<ENTRY>to</ENTRY>
+    if len(sys.argv) == 1:
+        print 'Use -h for help'
+        sys.exit(0)</ENTRY>
 <ENTRY>
-      # the from address is not invalid, but it has an issue
-      pass
-        verified_address = address.verify()
-        if 'message' in verified_address:
-            return verified_address['message']</ENTRY>
-<ENTRY>"Submitted"</ENTRY>
-<ENTRY>from_address = easypost.Address.create(
-        company = 'Alm Laboratory',
-        street1 = '77 Massachusetts Ave',
-        city = 'Cambridge',
-        state = 'MA',
-        zip = '02139',
-        country = 'US'
-    )
-    try:
-        from_address = from_address.verify()
-    except easypost.Error as e:
-        return str(e)
-    if hasattr(from_address, 'message'):
-        return from_address['message']</ENTRY>
-<ENTRY>from_address = </ENTRY>
-<ENTRY>Cou</ENTRY>
-<ENTRY>
-    # create customs_info form for intl shipping
-    customs_item = easypost.CustomsItem.create(
-      description = "EasyPost t-shirts",
-      hs_tariff_number = 123456,
-      origin_country = "US",
-      quantity = 2,
-      value = 96.27,
-      weight = 21.1
-    )
-    customs_info = easypost.CustomsInfo.create(
-      customs_certify = 1,
-      customs_signer = "Hector Hammerfall",
-      contents_type = "gift",
-      contents_explanation = "",
-      eel_pfc = "NOEEI 30.37(a)",
-      non_delivery_option = "return",
-      restriction_type = "none",
-      restriction_comments = "",
-      customs_items = [customs_item]
-    )
-    </ENTRY>
-<ENTRY>,
-      customs_info = customs_info</ENTRY>
-<ENTRY>ation for shipping h</ENTRY>
-<ENTRY>return str(e)</ENTRY>
-<ENTRY>
-except easypost.Error as e:
-    </ENTRY>
-<ENTRY>
-try:</ENTRY>
-<ENTRY>if hasattr(from_address, 'message'):
-    return from_address['message']
+    arg_1 = sys.argv[1]
+    #Help argument
+    if arg_1 == '--help' or arg_1 == '-h':
+        print_help()
+        sys.exit(0)
+    #Single argument (not enough)
+    if len(sys.argv) == 2 or len(sys.argv) == 3:
+        print 'Use -h for help'
+        sys.exit(0)
 </ENTRY>
+<ENTRY>v</ENTRY>
+<ENTRY>DATA</ENTRY>
+<ENTRY>view_datasets</ENTRY>
+<ENTRY>file_location</ENTRY>
+<ENTRY>
+    #Check Verbosity and viewDatasets
+    verbose = False
+    view_datasets = False
+    if '-r' in sys.argv:
+        verbose = True
+    if '-d' in sys.argv:
+        view_datasets = True
+
+    #Three expected arguments
+    tree_id = sys.argv[1]
+    file_location = sys.argv[2]
+    tree_format = sys.argv[3]</ENTRY>
+<ENTRY>
+    tree_id = args.tree_id
+    file_location = args.file_location
+    tree_format = args.format
+    </ENTRY>
+<ENTRY>
+# Print help info to the command line
+def print_help():
+    """
+    This prints some help info to the command line
+    """
+    print 'Usage: python itolexport.py TREEID FILELOCATION FORMAT [-r] [-d]'
+    print '  or:  python itolexport.py -h'
+    print 'TREEID is the itol id of the tree you would like to export'
+    print 'FILELOCATION is where you would like the exported tree to be \
+    saved to (any file at FILELOCATION will be OVERWRITTEN)'
+    print 'FORMAT is the format/file type of the export; accepted values are: \
+    png, svg, eps, ps, pdf, nexus, newick'
+    print 'Calling itolexport.py will write the exported tree to filelocation'
+    print ''
+    print '  -h   Display this help message'
+    print '  -r   Verbose Output'
+    print '  -d   Display Datasets'
+    print ''
+    print 'Use itol.py to upload trees using python to the iTOL website'
+    print 'Read the README and itolexport.py source code for information about \
+    more powerful iTOL exporting.'
+    print ''
+    print 'Report bugs to http://github.com/albertyw/itolapi'
+</ENTRY>
+<ENTRY>se</ENTRY>
+<ENTRY>; accepted values are %s" % ItolExport.EXPORT_FORMATS</ENTRY>
+<ENTRY>0</ENTRY>
 </KILLRING>

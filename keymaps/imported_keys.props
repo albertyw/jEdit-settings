@@ -1,5 +1,5 @@
 #jEdit's keymap imported
-#Wed Jan 22 22:16:40 PST 2014
+#Thu May 22 23:34:39 PDT 2014
 end.shortcut2=A+e
 select-line-range.shortcut=C+e C+l
 close-docking-area.shortcut=C+e C+BACK_QUOTE
@@ -7,7 +7,7 @@ delete-paragraph.shortcut=C+e d
 next-bracket.shortcut=C+e C+CLOSE_BRACKET
 toggle-line-numbers.shortcut=C+e C+t
 copy.shortcut2=C+INSERT
-quick-search.shortcut=C+COMMA
+quick-search.shortcut=C+f
 indent-lines.shortcut=C+i
 select-prev-page.shortcut=S+PAGE_UP
 add-marker.shortcut=C+e C+m
@@ -141,10 +141,10 @@ record-temp-macro.shortcut=C+m C+m
 vertical-paste.shortcut=C+e C+p
 search-in-directory.shortcut=C+e C+d
 unsplit-current.shortcut=C+0
-home.shortcut=HOME
 right-docking-area.shortcut=C+e C+RIGHT
+home.shortcut=HOME
 run-temp-macro.shortcut=C+m C+p
-find.shortcut=C+f
+find.shortcut=A+f
 goto-line.shortcut2=A+g
 select-next-page.shortcut2=AS+a
 find-next.shortcut=F3
