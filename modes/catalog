@@ -8,6 +8,7 @@
 
 <MODE NAME="coffeescript" FILE="coffeescript.xml" FILE_NAME_GLOB="*.coffee" />
 <MODE NAME="css" FILE="css.xml" FILE_NAME_GLOB="*.{css,less}" />
+<MODE NAME="cucumber" FILE="cucumber.xml" FILE_NAME_GLOB="*.feature" />
 <MODE NAME="django" FILE="django.xml" FILE_NAME_GLOB="*.dj" />
 <MODE NAME="haml" FILE="haml.xml" FILE_NAME_GLOB="*.{haml,slim}" />
 <MODE NAME="html" FILE="html.xml" FILE_NAME_GLOB="*.{html,htm,hta}" />
