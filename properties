@@ -317,6 +317,7 @@ view-markers.dock-position=floating
 view-registers.dock-position=floating
 view.context=cut copy paste paste-previous paste-deleted - collapse-fold expand-fold narrow-to-fold reload-all
 view.docking.framework=Original
+view.eolMarkerChar=.
 view.eolMarkers=true
 view.extendedState=6
 view.font=Inconsolata
