@@ -1,4 +1,4 @@
-#Tue Dec 08 18:10:50 PST 2015
+#Thu Jan 28 14:58:43 PST 2016
 #jEdit properties
 Combined\ Options.height=694
 Combined\ Options.x=438
@@ -11,10 +11,8 @@ autoReloadDialog=false
 buffer.deepIndent=false
 buffer.encoding=UTF-8
 buffer.folding=indent
-buffer.indentSize=4
 buffer.lineSeparator=\n
 buffer.noTabs=true
-buffer.tabSize=4
 bufferset.scope=global
 buffertabs.close-tab-on.double-left-click=true
 buffertabs.close-tab-on.single-middle-click=true
@@ -153,6 +151,24 @@ mode.django.noTabs=true
 mode.django.noWordSep=_
 mode.django.tabSize=2
 mode.django.wrap=none
+mode.foxpro.customSettings=false
+mode.gcbasic.customSettings=false
+mode.gnuplot.customSettings=false
+mode.go.autoIndent=full
+mode.go.camelCasedWords=false
+mode.go.collapseFolds=0
+mode.go.customSettings=true
+mode.go.deepIndent=false
+mode.go.elasticTabstops=false
+mode.go.filenameGlob=*.go
+mode.go.firstlineGlob=
+mode.go.folding=indent
+mode.go.indentSize=2
+mode.go.maxLineLen=80
+mode.go.noTabs=false
+mode.go.noWordSep=_
+mode.go.tabSize=2
+mode.go.wrap=none
 mode.haml.customSettings=false
 mode.htaccess.customSettings=false
 mode.html.autoIndent=full
