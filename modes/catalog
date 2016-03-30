@@ -16,6 +16,7 @@
 <MODE NAME="javascript" FILE="javascript.xml" FILE_NAME_GLOB="{*.js,Buildsub}" />
 <MODE NAME="matlab" FILE="matlab.xml" FILE_NAME_GLOB="*.m" />
 <MODE NAME="markdown" FILE="markdown.xml" FILE_NAME_GLOB="*.md" />
+<MODE NAME="ocaml" FILE="ocaml.xml" FILE_NAME_GLOB="*.{ml,mli}" />
 <MODE NAME="rakefile" FILE="ruby.xml" FILE_NAME_GLOB="*Rakefile" />
 <MODE NAME="ruby" FILE="ruby.xml" FILE_NAME_GLOB="*.{rb,rbw}" FIRST_LINE_GLOB="#!*/*ruby*" />
 <MODE NAME="sass" FILE="sass.xml" FILE_NAME_GLOB="*.{sass,scss}" />
