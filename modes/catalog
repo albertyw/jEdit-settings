@@ -10,6 +10,7 @@
 <MODE NAME="css" FILE="css.xml" FILE_NAME_GLOB="*.{css,less}" />
 <MODE NAME="cucumber" FILE="cucumber.xml" FILE_NAME_GLOB="*.feature" />
 <MODE NAME="django" FILE="django.xml" FILE_NAME_GLOB="*.dj" />
+<MODE NAME="gitconfig" FILE="gitconfig.xml" FILE_NAME_GLOB="*gitconfig" />
 <MODE NAME="haml" FILE="haml.xml" FILE_NAME_GLOB="*.{haml,slim}" />
 <MODE NAME="html" FILE="html.xml" FILE_NAME_GLOB="*.{html,htm,hta}" />
 <MODE NAME="javascript" FILE="javascript.xml" FILE_NAME_GLOB="{*.js,Buildsub}" />
