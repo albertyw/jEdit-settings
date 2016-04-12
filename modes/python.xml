@@ -321,6 +321,7 @@
 			<KEYWORD3>__members__</KEYWORD3>
 			<KEYWORD3>__metaclass__</KEYWORD3>
 			<KEYWORD3>__mod__</KEYWORD3>
+			<KEYWORD3>__module__</KEYWORD3>
 			<KEYWORD3>__mro__</KEYWORD3>
 			<KEYWORD3>__mul__</KEYWORD3>
 			<KEYWORD3>__name__</KEYWORD3>
