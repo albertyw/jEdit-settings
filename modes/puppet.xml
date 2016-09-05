@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<!DOCTYPE MODE SYSTEM "xmode.dtd">
+
+<!--
+# Puppet syntax highlight mode
+
+Ben Williams <benw01@gmail.com>
+
+
+## Keywords
+
+- COMMENT1: All comments (line and range)
+- FUNCTION: custom functions and class/object methods, e.g. foo(), $foo->bar() and foo::bar()
+- KEYWORD1: control
+- KEYWORD2: builtin types, functions
+- KEYWORD3: parameters
+- KEYWORD4: variables
+- LITERAL1: Strings (single or double quotes)
+- LITERAL2: regexps
+- OPERATOR: normal operators, e.g. + - ( ) { } [ ]
+
+
+## catalog entry
+
+<MODE NAME="puppet" FILE="puppet.xml" FILE_NAME_GLOB="*.pp" />
+
+
+## Version history
+
+### 1.0, 26/11/2013
+
+Includes major types and their parameters. Highlights vars inside double-quoted strings.
+Some duplicates in the parameters for common types (e.g. "ensure").
+Highlights brackets etc as operators. This should possibly exclude them for just proper
+operators (+, -, ->, etc).
+
+
+-->
+
+<MODE>
+	<PROPS>
+		<PROPERTY NAME="commentStart" VALUE="/*" />
+		<PROPERTY NAME="commentEnd"   VALUE="*/" />
+		<PROPERTY NAME="lineComment"  VALUE="#" />
+		<PROPERTY NAME="wordBreakChars" VALUE=",+-=&lt;&gt;/?^&amp;*" />
+
+		<!-- autoIndent -->
+		<PROPERTY NAME="indentOpenBrackets" VALUE="{" />
+		<PROPERTY NAME="indentCloseBrackets" VALUE="}" />
+		<PROPERTY NAME="lineUpClosingBracket" VALUE="true" />
+		<PROPERTY NAME="unalignedOpenBrackets" VALUE="(" />
+		<PROPERTY NAME="unalignedCloseBrackets" VALUE=")" />
+
+	</PROPS>
+
+	<RULES HIGHLIGHT_DIGITS="TRUE">
+		<!-- delegate <% %> to ruby -->
+		<SPAN TYPE="MARKUP" DELEGATE="ruby">
+			<BEGIN>&lt;%</BEGIN>
+			<END>%&gt;</END>
+		</SPAN>
+
+		<!-- comments -->
+		<SPAN TYPE="COMMENT1">
+			<BEGIN>/*</BEGIN>
+			<END>*/</END>
+		</SPAN>
+		<EOL_SPAN TYPE="COMMENT1">#</EOL_SPAN>
+
+		<!--variables -->
+		<MARK_FOLLOWING TYPE="KEYWORD4">$</MARK_FOLLOWING>
+
+		<!-- strings -->
+		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="TRUE" ESCAPE="\">
+			<BEGIN>'</BEGIN>
+			<END>'</END>
+		</SPAN>
+		<!-- double-quoted strings with variables inside -->
+		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="TRUE" ESCAPE="\" DELEGATE="DQ_STRINGS">
+			<BEGIN>"</BEGIN>
+			<END>"</END>
+		</SPAN>
+		<!-- regexps -->
+		<SPAN TYPE="LITERAL2" NO_LINE_BREAK="TRUE" ESCAPE="\" DELEGATE="regex">
+			<BEGIN>/</BEGIN>
+			<END>/</END>
+		</SPAN>
+
+		<!-- operators -->
+		<SEQ TYPE="OPERATOR">[</SEQ>
+		<SEQ TYPE="OPERATOR">]</SEQ>
+		<SEQ TYPE="OPERATOR">,</SEQ>
+		<SEQ TYPE="OPERATOR">@</SEQ>
+		<SEQ TYPE="OPERATOR">{</SEQ>
+		<SEQ TYPE="OPERATOR">}</SEQ>
+		<SEQ TYPE="OPERATOR">|&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;|</SEQ>
+		<SEQ TYPE="OPERATOR">-&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">~&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">::</SEQ>
+
+		<SEQ TYPE="OPERATOR">==</SEQ>
+		<SEQ TYPE="OPERATOR">!=</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;=</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;=</SEQ>
+		<SEQ TYPE="OPERATOR">=~</SEQ>
+		<SEQ TYPE="OPERATOR">!~</SEQ>
+		<SEQ TYPE="OPERATOR">!</SEQ>
+		<SEQ TYPE="OPERATOR">+</SEQ>
+		<SEQ TYPE="OPERATOR">-</SEQ>
+		<SEQ TYPE="OPERATOR">/</SEQ>
+		<SEQ TYPE="OPERATOR">*</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;&lt;</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">=</SEQ>
+
+		<OPERATOR>AND</OPERATOR>
+		<OPERATOR>in</OPERATOR>
+		<OPERATOR>or</OPERATOR>
+
+		<KEYWORDS>
+			<!-- control -->
+			<!-- http://docs.puppetlabs.com/puppet/2.7/reference/lang_reserved.html -->
+			<KEYWORD1>and</KEYWORD1>
+			<KEYWORD1>case</KEYWORD1>
+			<KEYWORD1>class</KEYWORD1>
+			<KEYWORD1>default</KEYWORD1>
+			<KEYWORD1>define</KEYWORD1>
+			<KEYWORD1>else</KEYWORD1>
+			<KEYWORD1>elsif</KEYWORD1>
+			<KEYWORD1>false</KEYWORD1>
+			<KEYWORD1>if</KEYWORD1>
+			<KEYWORD1>in</KEYWORD1>
+			<KEYWORD1>import</KEYWORD1>
+			<KEYWORD1>inherits</KEYWORD1>
+			<KEYWORD1>main</KEYWORD1>
+			<KEYWORD1>node</KEYWORD1>
+			<KEYWORD1>or</KEYWORD1>
+			<KEYWORD1>settings</KEYWORD1>
+			<KEYWORD1>true</KEYWORD1>
+			<KEYWORD1>undef</KEYWORD1>
+
+			<!-- types -->
+			<!-- http://docs.puppetlabs.com/references/2.7.latest/type.html -->
+			<KEYWORD2>augeas</KEYWORD2>
+			<KEYWORD2>computer</KEYWORD2>
+			<KEYWORD2>cron</KEYWORD2>
+			<KEYWORD2>exec</KEYWORD2>
+			<KEYWORD2>file</KEYWORD2>
+			<KEYWORD2>filebucket</KEYWORD2>
+			<KEYWORD2>group</KEYWORD2>
+			<KEYWORD2>host</KEYWORD2>
+			<KEYWORD2>interface</KEYWORD2>
+			<KEYWORD2>k5login</KEYWORD2>
+			<KEYWORD2>macauthorization</KEYWORD2>
+			<KEYWORD2>mailalias</KEYWORD2>
+			<KEYWORD2>maillist</KEYWORD2>
+			<KEYWORD2>mcx</KEYWORD2>
+			<KEYWORD2>mount</KEYWORD2>
+			<KEYWORD2>nagios_command</KEYWORD2>
+			<KEYWORD2>nagios_contact</KEYWORD2>
+			<KEYWORD2>nagios_contactgroup</KEYWORD2>
+			<KEYWORD2>nagios_host</KEYWORD2>
+			<KEYWORD2>nagios_hostdependency</KEYWORD2>
+			<KEYWORD2>nagios_hostescalation</KEYWORD2>
+			<KEYWORD2>nagios_hostextinfo</KEYWORD2>
+			<KEYWORD2>nagios_hostgroup</KEYWORD2>
+			<KEYWORD2>nagios_service</KEYWORD2>
+			<KEYWORD2>nagios_servicedependency</KEYWORD2>
+			<KEYWORD2>nagios_serviceescalation</KEYWORD2>
+			<KEYWORD2>nagios_serviceextinfo</KEYWORD2>
+			<KEYWORD2>nagios_servicegroup</KEYWORD2>
+			<KEYWORD2>nagios_timeperiod</KEYWORD2>
+			<KEYWORD2>notify</KEYWORD2>
+			<KEYWORD2>package</KEYWORD2>
+			<KEYWORD2>resources</KEYWORD2>
+			<KEYWORD2>router</KEYWORD2>
+			<KEYWORD2>schedule</KEYWORD2>
+			<KEYWORD2>scheduled_task</KEYWORD2>
+			<KEYWORD2>selboolean</KEYWORD2>
+			<KEYWORD2>selmodule</KEYWORD2>
+			<KEYWORD2>service</KEYWORD2>
+			<KEYWORD2>ssh_authorized_key</KEYWORD2>
+			<KEYWORD2>sshkey</KEYWORD2>
+			<KEYWORD2>stage</KEYWORD2>
+			<KEYWORD2>tidy</KEYWORD2>
+			<KEYWORD2>user</KEYWORD2>
+			<KEYWORD2>vlan</KEYWORD2>
+			<KEYWORD2>yumrepo</KEYWORD2>
+			<KEYWORD2>zfs</KEYWORD2>
+			<KEYWORD2>zone</KEYWORD2>
+			<KEYWORD2>zpool</KEYWORD2>
+
+			<!-- functions -->
+			<!-- http://docs.puppetlabs.com/references/2.7.latest/function.html -->
+			<FUNCTION>alert</FUNCTION>
+			<FUNCTION>create_resources</FUNCTION>
+			<FUNCTION>crit</FUNCTION>
+			<FUNCTION>debug</FUNCTION>
+			<FUNCTION>defined</FUNCTION>
+			<FUNCTION>emerg</FUNCTION>
+			<FUNCTION>err</FUNCTION>
+			<FUNCTION>extlookup</FUNCTION>
+			<FUNCTION>fail</FUNCTION>
+			<!--FUNCTION>file</FUNCTION-->
+			<FUNCTION>fqdn_rand</FUNCTION>
+			<FUNCTION>generate</FUNCTION>
+			<FUNCTION>include</FUNCTION>
+			<FUNCTION>info</FUNCTION>
+			<FUNCTION>inline_template</FUNCTION>
+			<FUNCTION>md5</FUNCTION>
+			<FUNCTION>notice</FUNCTION>
+			<FUNCTION>realize</FUNCTION>
+			<FUNCTION>regsubst</FUNCTION>
+			<FUNCTION>require</FUNCTION>
+			<FUNCTION>search</FUNCTION>
+			<FUNCTION>sha1</FUNCTION>
+			<FUNCTION>shellquote</FUNCTION>
+			<FUNCTION>split</FUNCTION>
+			<FUNCTION>sprintf</FUNCTION>
+			<FUNCTION>tag</FUNCTION>
+			<FUNCTION>tagged</FUNCTION>
+			<FUNCTION>template</FUNCTION>
+			<FUNCTION>versioncmp</FUNCTION>
+			<FUNCTION>warning</FUNCTION>
+
+			<!-- metaparameters -->
+			<!-- http://docs.puppetlabs.com/references/2.7.latest/metaparameter.html -->
+			<KEYWORD3>alias</KEYWORD3>
+			<KEYWORD3>audit</KEYWORD3>
+			<KEYWORD3>before</KEYWORD3>
+			<KEYWORD3>check</KEYWORD3>
+			<KEYWORD3>loglevel</KEYWORD3>
+			<KEYWORD3>noop</KEYWORD3>
+			<KEYWORD3>notify</KEYWORD3>
+			<KEYWORD3>require</KEYWORD3>
+			<KEYWORD3>schedule</KEYWORD3>
+			<KEYWORD3>stage</KEYWORD3>
+			<KEYWORD3>subscribe</KEYWORD3>
+			<KEYWORD3>tag</KEYWORD3>
+
+			<!-- special values -->
+			<KEYWORD3>absent</KEYWORD3>
+			<KEYWORD3>directory</KEYWORD3>
+			<KEYWORD3>link</KEYWORD3>
+			<KEYWORD3>present</KEYWORD3>
+
+			<!-- common type parameters -->
+			<!-- There are some duplicates in here. Should probably be cleaned up. -->
+			<!-- Could potentially delegate spans for "file {" to a file ruleset. -->
+			<!-- file -->
+			<KEYWORD3>backup</KEYWORD3>
+			<KEYWORD3>checksum</KEYWORD3>
+			<KEYWORD3>content</KEYWORD3>
+			<KEYWORD3>ctime</KEYWORD3>
+			<KEYWORD3>ensure</KEYWORD3>
+			<KEYWORD3>force</KEYWORD3>
+			<KEYWORD3>group</KEYWORD3>
+			<KEYWORD3>ignore</KEYWORD3>
+			<KEYWORD3>links</KEYWORD3>
+			<KEYWORD3>mode</KEYWORD3>
+			<KEYWORD3>mtime</KEYWORD3>
+			<KEYWORD3>owner</KEYWORD3>
+			<KEYWORD3>path</KEYWORD3>
+			<KEYWORD3>provider</KEYWORD3>
+			<KEYWORD3>purge</KEYWORD3>
+			<KEYWORD3>recurse</KEYWORD3>
+			<KEYWORD3>recurselimit</KEYWORD3>
+			<KEYWORD3>replace</KEYWORD3>
+			<KEYWORD3>selinux_ignore_defaults</KEYWORD3>
+			<KEYWORD3>selrange</KEYWORD3>
+			<KEYWORD3>selrole</KEYWORD3>
+			<KEYWORD3>seltype</KEYWORD3>
+			<KEYWORD3>seluser</KEYWORD3>
+			<KEYWORD3>source</KEYWORD3>
+			<KEYWORD3>target</KEYWORD3>
+			<KEYWORD3>type</KEYWORD3>
+			<!-- package -->
+			<KEYWORD3>adminfile</KEYWORD3>
+			<KEYWORD3>allowcdrom</KEYWORD3>
+			<KEYWORD3>category</KEYWORD3>
+			<KEYWORD3>configfiles</KEYWORD3>
+			<KEYWORD3>description</KEYWORD3>
+			<KEYWORD3>ensure</KEYWORD3>
+			<KEYWORD3>flavor</KEYWORD3>
+			<KEYWORD3>install_options</KEYWORD3>
+			<KEYWORD3>instance</KEYWORD3>
+			<KEYWORD3>name</KEYWORD3>
+			<KEYWORD3>platform</KEYWORD3>
+			<KEYWORD3>provider</KEYWORD3>
+			<KEYWORD3>responsefile</KEYWORD3>
+			<KEYWORD3>root</KEYWORD3>
+			<KEYWORD3>source</KEYWORD3>
+			<KEYWORD3>status</KEYWORD3>
+			<KEYWORD3>type</KEYWORD3>
+			<KEYWORD3>vendor</KEYWORD3>
+			<!-- service -->
+			<KEYWORD3>binary</KEYWORD3>
+			<KEYWORD3>control</KEYWORD3>
+			<KEYWORD3>enable</KEYWORD3>
+			<KEYWORD3>ensure</KEYWORD3>
+			<KEYWORD3>hasrestart</KEYWORD3>
+			<KEYWORD3>hasstatus</KEYWORD3>
+			<KEYWORD3>manifest</KEYWORD3>
+			<KEYWORD3>name</KEYWORD3>
+			<KEYWORD3>path</KEYWORD3>
+			<KEYWORD3>pattern</KEYWORD3>
+			<KEYWORD3>provider</KEYWORD3>
+			<KEYWORD3>restart</KEYWORD3>
+			<KEYWORD3>start</KEYWORD3>
+			<KEYWORD3>status</KEYWORD3>
+			<KEYWORD3>stop</KEYWORD3>
+			<!-- cron -->
+			<KEYWORD3>command</KEYWORD3>
+			<KEYWORD3>ensure</KEYWORD3>
+			<KEYWORD3>environment</KEYWORD3>
+			<KEYWORD3>hour</KEYWORD3>
+			<KEYWORD3>minute</KEYWORD3>
+			<KEYWORD3>month</KEYWORD3>
+			<KEYWORD3>monthday</KEYWORD3>
+			<KEYWORD3>name</KEYWORD3>
+			<KEYWORD3>provider</KEYWORD3>
+			<KEYWORD3>special</KEYWORD3>
+			<KEYWORD3>target</KEYWORD3>
+			<KEYWORD3>user</KEYWORD3>
+			<KEYWORD3>weekday</KEYWORD3>
+			<!-- exec -->
+			<KEYWORD3>command</KEYWORD3>
+			<KEYWORD3>creates</KEYWORD3>
+			<KEYWORD3>cwd</KEYWORD3>
+			<KEYWORD3>environment</KEYWORD3>
+			<KEYWORD3>group</KEYWORD3>
+			<KEYWORD3>logoutput</KEYWORD3>
+			<KEYWORD3>onlyif</KEYWORD3>
+			<KEYWORD3>path</KEYWORD3>
+			<KEYWORD3>provider</KEYWORD3>
+			<KEYWORD3>refresh</KEYWORD3>
+			<KEYWORD3>refreshonly</KEYWORD3>
+			<KEYWORD3>returns</KEYWORD3>
+			<KEYWORD3>timeout</KEYWORD3>
+			<KEYWORD3>tries</KEYWORD3>
+			<KEYWORD3>try_sleep</KEYWORD3>
+			<KEYWORD3>unless</KEYWORD3>
+			<KEYWORD3>user</KEYWORD3>
+			<!-- user -->
+			<KEYWORD3>allowdupe</KEYWORD3>
+			<KEYWORD3>attribute_membership</KEYWORD3>
+			<KEYWORD3>attributes</KEYWORD3>
+			<KEYWORD3>auth_membership</KEYWORD3>
+			<KEYWORD3>auths</KEYWORD3>
+			<KEYWORD3>comment</KEYWORD3>
+			<KEYWORD3>ensure</KEYWORD3>
+			<KEYWORD3>expiry</KEYWORD3>
+			<KEYWORD3>gid</KEYWORD3>
+			<KEYWORD3>groups</KEYWORD3>
+			<KEYWORD3>home</KEYWORD3>
+			<KEYWORD3>ia_load_module</KEYWORD3>
+			<KEYWORD3>key_membership</KEYWORD3>
+			<KEYWORD3>keys</KEYWORD3>
+			<KEYWORD3>managehome</KEYWORD3>
+			<KEYWORD3>membership</KEYWORD3>
+			<KEYWORD3>name</KEYWORD3>
+			<KEYWORD3>password</KEYWORD3>
+			<KEYWORD3>password_max_age</KEYWORD3>
+			<KEYWORD3>password_min_age</KEYWORD3>
+			<KEYWORD3>profile_membership</KEYWORD3>
+			<KEYWORD3>profiles</KEYWORD3>
+			<KEYWORD3>project</KEYWORD3>
+			<KEYWORD3>provider</KEYWORD3>
+			<KEYWORD3>role_membership</KEYWORD3>
+			<KEYWORD3>roles</KEYWORD3>
+			<KEYWORD3>shell</KEYWORD3>
+			<KEYWORD3>system</KEYWORD3>
+			<KEYWORD3>uid</KEYWORD3>
+			<!-- group -->
+			<KEYWORD3>allowdupe</KEYWORD3>
+			<KEYWORD3>attribute_membership</KEYWORD3>
+			<KEYWORD3>attributes</KEYWORD3>
+			<KEYWORD3>auth_membership</KEYWORD3>
+			<KEYWORD3>ensure</KEYWORD3>
+			<KEYWORD3>gid</KEYWORD3>
+			<KEYWORD3>ia_load_module</KEYWORD3>
+			<KEYWORD3>members</KEYWORD3>
+			<KEYWORD3>name</KEYWORD3>
+			<KEYWORD3>provider</KEYWORD3>
+			<KEYWORD3>system</KEYWORD3>
+
+
+		</KEYWORDS>
+
+
+	</RULES>
+
+	<!-- double-quoted strings with variables inside -->
+	<RULES SET="DQ_STRINGS" DEFAULT="LITERAL1" ESCAPE="\">
+		<SEQ_REGEXP HASH_CHAR="$" TYPE="KEYWORD4">[\$]\{*[a-z][a-zA-Z0-9_]*\}*</SEQ_REGEXP>
+	</RULES>
+
+</MODE>
