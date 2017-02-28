@@ -1,4 +1,4 @@
-#Thu Jan 28 14:58:43 PST 2016
+#Mon Feb 27 22:23:25 PST 2017
 #jEdit properties
 Combined\ Options.height=694
 Combined\ Options.x=438
@@ -205,6 +205,22 @@ mode.javascript.noTabs=true
 mode.javascript.noWordSep=_
 mode.javascript.tabSize=4
 mode.javascript.wrap=none
+mode.macroscheduler.customSettings=false
+mode.makefile.autoIndent=full
+mode.makefile.camelCasedWords=false
+mode.makefile.collapseFolds=0
+mode.makefile.customSettings=true
+mode.makefile.deepIndent=false
+mode.makefile.elasticTabstops=false
+mode.makefile.filenameGlob=*makefile
+mode.makefile.firstlineGlob=
+mode.makefile.folding=indent
+mode.makefile.indentSize=4
+mode.makefile.maxLineLen=80
+mode.makefile.noTabs=false
+mode.makefile.noWordSep=_
+mode.makefile.tabSize=4
+mode.makefile.wrap=none
 mode.rakefile.customSettings=false
 mode.ruby.autoIndent=full
 mode.ruby.camelCasedWords=false
