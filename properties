@@ -1,4 +1,4 @@
-#Mon Feb 27 22:23:25 PST 2017
+#Mon Aug 14 17:49:02 PDT 2017
 #jEdit properties
 Combined\ Options.height=694
 Combined\ Options.x=438
@@ -152,7 +152,10 @@ mode.django.noWordSep=_
 mode.django.tabSize=2
 mode.django.wrap=none
 mode.foxpro.customSettings=false
+mode.freemarker.customSettings=false
 mode.gcbasic.customSettings=false
+mode.gettext.customSettings=false
+mode.gitconfig.customSettings=false
 mode.gnuplot.customSettings=false
 mode.go.autoIndent=full
 mode.go.camelCasedWords=false
@@ -326,6 +329,7 @@ status.errorWidget.y=50
 suppressNotSavedConfirmUntitled=false
 task-monitor.dock-position=floating
 tip.show=false
+twoStageSave=false
 useMD5forDirtyCalculation=true
 vfs.browser.dialog.height=517
 vfs.browser.dialog.width=546
