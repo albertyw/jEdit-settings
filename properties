@@ -8,6 +8,7 @@ Global\ Options.splitter=162
 Plugin\ Options.last=buffertabs
 Plugin\ Options.splitter=116
 autoReloadDialog=false
+backup.suffix=
 buffer.deepIndent=false
 buffer.encoding=UTF-8
 buffer.folding=indent
